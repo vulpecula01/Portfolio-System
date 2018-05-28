@@ -48,9 +48,9 @@
 $active_group = 'user';
 $active_record = TRUE;
 
-$db['port']['hostname'] = '103.86.50.206';
+$db['port']['hostname'] = 'db';
 $db['port']['username'] = 'profile_teacher';
-$db['port']['password'] = 'profile_teacher01';
+$db['port']['password'] = 'R7t9Q9pN';
 $db['port']['database'] = 'profile_teacher';
 $db['port']['dbdriver'] = 'mysqli';
 $db['port']['dbprefix'] = '';
