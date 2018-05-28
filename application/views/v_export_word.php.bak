@@ -1,0 +1,139 @@
+<?php 
+$strWordFileName = "Portfolio.doc"; 
+header("Content-Type: application/vnd.ms-word; name=\"$strWordFileName\""); 
+header("Content-Disposition: inline; filename=\"$strWordFileName\""); 
+header("Pragma: no-cache"); 
+?>
+
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<div>
+<div>
+	<h1 style="text-align:center;">
+		Portfolio<br/>
+		ระบบจัดงานวิจัยและแฟ้มประวัติอาจารย์<br/>
+		<img src="<?php echo site_url("getpic?image=").$person['usr_picpath']; ?>"/>
+	</h1>
+	<h3 style="text-align:center;">
+		<?php echo $person['acr_ename'].' '.$person['usrename']?>
+	</h3>
+	<h2 style="text-align:center;">
+		<?php echo $person['acr_tname'].' '.$person['usrtname']?>
+	</h2>
+</div>
+<hr/>
+
+<h4>General Information (ข้อมูลทั่วไป)</h4>
+<ul style="list-style-type:none">
+	<li style="margin-left:-20px;"><?php echo $person['acr_ename'].' '.$person['dep_ename'].' ('.$person['acr_tname'].' สาขาวิชา'.$person['dep_tname'].')';?></li>
+	<li style="margin-left:-20px;"><?php echo $person['dep_ename'].' (ภาควิชา'.$person['dep_tname'].')';?> </li>
+	<li style="margin-left:-20px;">Contact (การติดต่อ)
+		<ul style="list-style-type:disc">
+			<?php if($tel == NULL){ ?>
+				<li>N/A</li>
+			<?php } else {
+				foreach ($tel as $key) { ?>
+					<li><?php echo $key['tel'].' : '.$key['tel_number'];?></li>
+				<?php }
+			} ?>
+		</ul>
+	</li>
+	<li style="margin-left:-20px;">E-mail
+		<ul style="list-style-type:disc">
+			<?php if($mail == NULL){ ?>
+				<li>N/A</li>
+			<?php }else{
+				foreach ($mail as $key) { ?>
+					<li><?php echo $key['mail_name'];?></li>
+				<?php }
+			} ?>
+		</ul>
+	</li>
+</ul>
+
+<h4>Education Background (ประวัติการศึกษา)</h4>
+<ol>
+	<?php if($bg == NULL){ ?>
+		<li>N/A</li>
+	<?php }else{
+		foreach ($bg as $key) { ?>
+			<li><?php echo $key['deg_eacronym'].', '.$key['maj_ename'].', '.$key['ins_ename'].', '.$key['cou_ename'].', '.$key['edb_yeargraduate']; ?></li>
+		<?php }
+	} ?>
+</ol>
+
+<h4>Jobs Experience (ประสบการณ์การทํางาน)</h4>
+<ol>
+	<?php if($job == NULL){ ?>
+		<li>N/A</li>
+	<?php }else{
+		foreach ($job as $key) { ?>
+			<li><?php echo $key['jox_ename'].' ('.$key['start'].' - '.$key['end'].')'; ?></li>
+		<?php }
+	} ?>
+</ol>
+
+<h4>The Award (รางวัลที่เคยได้รับ)</h4>
+<ol>
+	<?php if($award == NULL){ ?>
+		<li>N/A</li>
+	<?php }else{
+		foreach ($award as $key) { ?>
+			<li><?php echo $key['awd_ename'].' ('.$key['awd_date'].') '.$key['awd_einsitute']; ?></li>
+		<?php }
+	} ?>
+</ol>
+
+<h4>Research (ผลงานวิจัย)</h4>
+<ul style="list-style-type:none">
+	<li class="header">Research Project (โครงการวิจัย)</li>
+	<ul style="list-style-type:disc">
+		<li><?php echo $person['usrename'];?>. (ปี). ชื่องานวิจัย. เงินรายได้ คณะ.</li>
+	</ul> 
+	<li class="header">Journal (วารสาร)</li>
+	<ul style="list-style-type:disc">
+		<li class="header">National (ระดับชาติ)</li>
+		<ul>
+			<li><?php echo $person['usrename'];?>. (ปี). ชื่องานวิจัย. ชื่อวารสาร , 18(1), 144-152.</li>
+		</ul>
+		<li class="header">International (ระดับนานาชาติ)</li>
+		<ul>
+			<li><?php echo $person['usrename'];?>. (ปี). ชื่องานวิจัย. ชื่อวารสาร , 18(1), 144-152.</li>
+		</ul> 
+	</ul>
+	<li class="header">Proceeding (เอกสารการประชุมวิชาการ)</li>
+	<ul style="list-style-type:disc">
+		<li class="header">N/A</li>
+	</ul>
+</ul>
+
+<h4>Topics of interest (หัวข้อที่สนใจ)</h4>
+<ul style="list-style-type:none">
+	<?php if($itr_topic == NULL){?>
+		<li>N/A</li>
+	<?php }else{
+		foreach ($itr_topic as $key) {?>
+			<li><?php echo $key['int_ename'];?></li>
+		<?php }
+	}?>
+</ul>
+
+<h4>สาขาที่เชี่ยวชาญและสนใจ</h4>
+<ol>
+	<?php if($itr_maj == NULL){?>
+		<li>N/A</li>
+	<?php }else{
+		foreach ($itr_maj as $key) {?>
+			<li><?php echo $key['int_ename'];?></li>
+		<?php }
+	}?>
+</ol>
+
+</body>
+</html>

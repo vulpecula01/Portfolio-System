@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180518 07:01:05.567" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="C:\docker-999\web_public\Robot_Test\Activities.robot" id="s1" name="Activities">
+<test id="s1-t1" name="MainNavigation : Activities">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://10.80.34.5:9001/index.php/c_login</arg>
+<arg>GC</arg>
+</arguments>
+<msg timestamp="20180518 07:01:13.705" level="INFO">Opening browser 'GC' to base url 'http://10.80.34.5:9001/index.php/c_login'.</msg>
+<status status="PASS" endtime="20180518 07:01:31.385" starttime="20180518 07:01:13.705"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20180518 07:01:31.387" level="INFO">Typing text 'admin' into text field 'name=username'.</msg>
+<status status="PASS" endtime="20180518 07:01:31.559" starttime="20180518 07:01:31.386"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20180518 07:01:31.560" level="INFO">Typing text '1111' into text field 'name=password'.</msg>
+<status status="PASS" endtime="20180518 07:01:31.681" starttime="20180518 07:01:31.560"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@type="submit" and text()="Sign In"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:31.682" level="INFO">Clicking button 'xpath=//button[@type="submit" and text()="Sign In"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:34.240" starttime="20180518 07:01:31.681"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>InformaticsPortfolio</arg>
+</arguments>
+<status status="PASS" endtime="20180518 07:01:34.274" starttime="20180518 07:01:34.241"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()[contains(.,'Activities')]]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:34.275" level="INFO">Clicking element 'xpath=//a[text()[contains(.,'Activities')]]'.</msg>
+<status status="PASS" endtime="20180518 07:01:34.924" starttime="20180518 07:01:34.275"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>ข้อมูลกิจกรรม</arg>
+</arguments>
+<status status="PASS" endtime="20180518 07:01:35.156" starttime="20180518 07:01:34.925"></status>
+</kw>
+<status status="PASS" endtime="20180518 07:01:35.157" critical="yes" starttime="20180518 07:01:13.704"></status>
+</test>
+<test id="s1-t2" name="1. AllEmpty">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="yearFrom"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:35.160" level="INFO">Clicking element 'xpath=//select[@name="yearFrom"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:35.401" starttime="20180518 07:01:35.160"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexENG</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20180518 07:01:35.402" level="INFO">Typing text '' into text field 'name=jobexENG'.</msg>
+<status status="PASS" endtime="20180518 07:01:35.563" starttime="20180518 07:01:35.402"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexTH</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20180518 07:01:35.564" level="INFO">Typing text '' into text field 'name=jobexTH'.</msg>
+<status status="PASS" endtime="20180518 07:01:35.704" starttime="20180518 07:01:35.563"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@type="submit"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:35.705" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:36.189" starttime="20180518 07:01:35.704"></status>
+</kw>
+<status status="PASS" endtime="20180518 07:01:36.190" critical="yes" starttime="20180518 07:01:35.159"></status>
+</test>
+<test id="s1-t3" name="2. InsertStart">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="yearFrom"]/option[@value="2014"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:36.194" level="INFO">Clicking element 'xpath=//select[@name="yearFrom"]/option[@value="2014"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:36.286" starttime="20180518 07:01:36.194"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexENG</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20180518 07:01:36.288" level="INFO">Typing text '' into text field 'name=jobexENG'.</msg>
+<status status="PASS" endtime="20180518 07:01:36.413" starttime="20180518 07:01:36.288"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexTH</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20180518 07:01:36.414" level="INFO">Typing text '' into text field 'name=jobexTH'.</msg>
+<status status="PASS" endtime="20180518 07:01:36.531" starttime="20180518 07:01:36.414"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@type="submit"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:36.532" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:37.002" starttime="20180518 07:01:36.532"></status>
+</kw>
+<status status="PASS" endtime="20180518 07:01:37.003" critical="yes" starttime="20180518 07:01:36.192"></status>
+</test>
+<test id="s1-t4" name="3. InsertActivities(Eng)">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="yearFrom"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:37.008" level="INFO">Clicking element 'xpath=//select[@name="yearFrom"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:37.154" starttime="20180518 07:01:37.007"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexENG</arg>
+<arg>Singer</arg>
+</arguments>
+<msg timestamp="20180518 07:01:37.156" level="INFO">Typing text 'Singer' into text field 'name=jobexENG'.</msg>
+<status status="PASS" endtime="20180518 07:01:37.401" starttime="20180518 07:01:37.156"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexTH</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20180518 07:01:37.402" level="INFO">Typing text '' into text field 'name=jobexTH'.</msg>
+<status status="PASS" endtime="20180518 07:01:37.523" starttime="20180518 07:01:37.402"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@type="submit"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:37.524" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:38.005" starttime="20180518 07:01:37.524"></status>
+</kw>
+<status status="PASS" endtime="20180518 07:01:38.006" critical="yes" starttime="20180518 07:01:37.006"></status>
+</test>
+<test id="s1-t5" name="4. InsertActivities(TH)">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="yearFrom"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:38.010" level="INFO">Clicking element 'xpath=//select[@name="yearFrom"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:38.135" starttime="20180518 07:01:38.010"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexENG</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20180518 07:01:38.136" level="INFO">Typing text '' into text field 'name=jobexENG'.</msg>
+<status status="PASS" endtime="20180518 07:01:38.256" starttime="20180518 07:01:38.135"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexTH</arg>
+<arg>ร้องเพลง</arg>
+</arguments>
+<msg timestamp="20180518 07:01:38.257" level="INFO">Typing text 'ร้องเพลง' into text field 'name=jobexTH'.</msg>
+<status status="PASS" endtime="20180518 07:01:38.455" starttime="20180518 07:01:38.256"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@type="submit"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:38.456" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:38.896" starttime="20180518 07:01:38.456"></status>
+</kw>
+<status status="PASS" endtime="20180518 07:01:38.897" critical="yes" starttime="20180518 07:01:38.008"></status>
+</test>
+<test id="s1-t6" name="5. Insert Jobs Experience (TH) key ENGLanguage">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexENG</arg>
+<arg>นักร้อง</arg>
+</arguments>
+<msg timestamp="20180518 07:01:38.902" level="INFO">Typing text 'นักร้อง' into text field 'name=jobexENG'.</msg>
+<status status="PASS" endtime="20180518 07:01:39.082" starttime="20180518 07:01:38.901"></status>
+</kw>
+<status status="PASS" endtime="20180518 07:01:39.083" critical="yes" starttime="20180518 07:01:38.900"></status>
+</test>
+<test id="s1-t7" name="6. Insert Jobs Experience (EN) key ENGLanguage">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexTH</arg>
+<arg>Singer</arg>
+</arguments>
+<msg timestamp="20180518 07:01:39.086" level="INFO">Typing text 'Singer' into text field 'name=jobexTH'.</msg>
+<status status="PASS" endtime="20180518 07:01:39.237" starttime="20180518 07:01:39.086"></status>
+</kw>
+<status status="PASS" endtime="20180518 07:01:39.238" critical="yes" starttime="20180518 07:01:39.085"></status>
+</test>
+<test id="s1-t8" name="7. InsertAll">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="yearFrom"]/option[@value="2014"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:39.242" level="INFO">Clicking element 'xpath=//select[@name="yearFrom"]/option[@value="2014"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:39.320" starttime="20180518 07:01:39.241"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexENG</arg>
+<arg>Singer</arg>
+</arguments>
+<msg timestamp="20180518 07:01:39.321" level="INFO">Typing text 'Singer' into text field 'name=jobexENG'.</msg>
+<status status="PASS" endtime="20180518 07:01:39.416" starttime="20180518 07:01:39.320"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=jobexTH</arg>
+<arg>นักร้อง</arg>
+</arguments>
+<msg timestamp="20180518 07:01:39.417" level="INFO">Typing text 'นักร้อง' into text field 'name=jobexTH'.</msg>
+<status status="PASS" endtime="20180518 07:01:39.522" starttime="20180518 07:01:39.417"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@type="submit"]</arg>
+</arguments>
+<msg timestamp="20180518 07:01:39.523" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<status status="PASS" endtime="20180518 07:01:40.062" starttime="20180518 07:01:39.523"></status>
+</kw>
+<status status="PASS" endtime="20180518 07:01:40.063" critical="yes" starttime="20180518 07:01:39.240"></status>
+</test>
+<status status="PASS" endtime="20180518 07:01:40.066" starttime="20180518 07:01:05.572"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="8">Critical Tests</stat>
+<stat fail="0" pass="8">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Activities" pass="8">Activities</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
