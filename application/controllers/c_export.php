@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class c_export extends Port_core {
+class C_export extends Port_core {
 
 	public function pdf($uid=true)
 	{
@@ -31,8 +31,6 @@ class c_export extends Port_core {
 		$data['itr_maj'] = $this->info->getInterest($userID,'2');
 		$data['research'] = $this->get_researchReference($userID);
 		$data['activity'] = $this->info->getActivity($userID);
-		$data['director'] = $this->info->getDirector($userID);
-		$data['lecturer'] = $this->info->getLecturer($userID);
 		$data['train'] = $this->info->getTrain($userID);
 		$data['insignia'] = $this->info->getInsignia($userID);
 		
@@ -122,8 +120,6 @@ class c_export extends Port_core {
 		$data['itr_maj'] = $this->info->getInterest($userID,'2');
 		$data['research'] = $this->get_researchReference($userID);
 		$data['activity'] = $this->info->getActivity($userID);
-		$data['director'] = $this->info->getDirector($userID);
-		$data['lecturer'] = $this->info->getLecturer($userID);
 		$data['train'] = $this->info->getTrain($userID);
 		$data['insignia'] = $this->info->getInsignia($userID);
 		
