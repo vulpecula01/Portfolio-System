@@ -64,9 +64,9 @@ $db['port']['swap_pre'] = '';
 $db['port']['autoinit'] = TRUE;	
 $db['port']['stricton'] = FALSE;
 
-$db['user']['hostname'] = '103.86.50.206';
+$db['user']['hostname'] = 'db';
 $db['user']['username'] = 'profile_teacher';
-$db['user']['password'] = 'profile_teacher01';
+$db['user']['password'] = 'R7t9Q9pN';
 $db['user']['database'] = 'profile_teacher';
 $db['user']['dbdriver'] = 'mysqli';
 $db['user']['dbprefix'] = '';
