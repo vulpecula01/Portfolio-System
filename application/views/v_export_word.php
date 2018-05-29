@@ -241,32 +241,7 @@ if($award == NULL){
 	}
 }
 
-$html = $html.'</ul>
-<h4>Director (การเป็นกรรมการ)</h4>
-<ul>';
-if($director == NULL){
-	$html = $html.'<li>N/A</li>';
-}else{
-	foreach ($director as $key) {
-		$html = $html.'<li>'.$key['di_tname'].' ('.$key['di_tlocation'].')  ปี.   '.$key['di_date'].'</li>';
-	}
-}
 
-$html = $html.'</ul>';
-
-$html = $html.'</ul>
-<h4>Lecturer (การเป็นวิทยากร)</h4>
-<ul>';
-if($lecturer == NULL){
-	$html = $html.'<li>N/A</li>';
-}else{
-	foreach ($lecturer as $key) {
-		$html = $html.'<li>'.$key['lec_tname'].' ('.$key['lec_tlocation'].')  ปี.   '.$key['lec_date'].'</li>';
-	}
-}
-
-
-$html = $html.'</ul>';
 $html = $html.'</ul>
 <h4>Training (การอบรม)</h4>
 <ul>';
