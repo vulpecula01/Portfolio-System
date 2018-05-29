@@ -407,7 +407,7 @@ $(function () {
 				console.log($(this).val())
 				var usr_id = $(this).val();
 
-				jQuery.getJSON("<?php echo site_url('C_admin_insignia/get_Probability/');?>/"+usr_id, function(result){
+				jQuery.getJSON("<?php echo site_url('c_admin_insignia/get_Probability/');?>/"+usr_id, function(result){
 					render_year(result.usr_dateforwork)
 					
 					if(result.current_insignia.sign_date == null){
