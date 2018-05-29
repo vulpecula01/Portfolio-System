@@ -1,6 +1,6 @@
 <?php
 
-class m_forecast_future extends Port_model {
+class M_forecast_future extends Port_model {
 
 	function generate_pos_1()//ข้าราชการระดับปฏิบัติงาน
 {
