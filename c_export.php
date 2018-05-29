@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class c_export extends Port_core {
+class C_export extends Port_core {
 
 	public function pdf($uid=true)
 	{
